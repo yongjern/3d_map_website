@@ -50,7 +50,7 @@ function Walls({ color, visible, selectedRoom }: { color: string; visible: boole
   if (!visible) return null;
   return <group>{WALLS.map(([x, z, width, depth], index) => {
     const distance = selectedRoom ? Math.hypot(x - selectedRoom.center[0], z - selectedRoom.center[2]) : 30;
-    const fade = selectedRoom && distance < 5.4;
+    const fade = selectedRoom !== null && distance < 5.4;
     return <RigidBody key={index} type="fixed" colliders={false}>
       <CuboidCollider args={[width / 2, SHOP.wallHeight / 2, depth / 2]} position={[x, SHOP.wallHeight / 2, z]} />
       <mesh position={[x, SHOP.wallHeight / 2, z]} castShadow receiveShadow>
