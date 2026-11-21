@@ -1,0 +1,11 @@
+{
+ "page": null,
+ "url": "http://localhost:3000/",
+ "root": null,
+ "kind": "software",
+ "category": "interactive 3D pet shop presentation",
+ "primary": "Start guided tour",
+ "rounds": 3,
+ "start": "2026-11-21T15:07:25.138Z",
+ "by": "gate.mjs --start"
+}
